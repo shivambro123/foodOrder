@@ -20,7 +20,7 @@ function App() {
           <Route path="/category" element={<CategoryPage/>}/>
           <Route path="/product" element={<ProductHome/>}/>
           <Route path="/cart" element={<Cart/>}/>
-
+          <Route path="foodorder" element={<HomePage/>}/>
         </Routes>
       </Router>
     </div>
