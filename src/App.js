@@ -5,7 +5,6 @@ import HomePage from './Component/HomePage/HomePage';
 import TableBook from './Component/TableBooking/TableBook';
 import AppBar from './Component/AppBar/AppBar';
 import CategoryPage from './Component/Category/CategoryPage';
-import ProItem from './Component/Product/ProItem/ProItem';
 import ProductHome from './Component/Product/ProductHome';
 import Cart from './Component/Cart/Cart';
 
@@ -20,7 +19,7 @@ function App() {
           <Route path="/category" element={<CategoryPage/>}/>
           <Route path="/product" element={<ProductHome/>}/>
           <Route path="/cart" element={<Cart/>}/>
-          <Route path="foodorder" element={<HomePage/>}/>
+          <Route path="/foodorder" element={<HomePage/>}/>
         </Routes>
       </Router>
     </div>
