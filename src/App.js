@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router ,Routes , Route } from 'react-router-dom';
+import HomePage from './Component/HomePage/HomePage';
+import TableBook from './Component/TableBooking/TableBook';
+import AppBar from './Component/AppBar/AppBar';
+import CategoryPage from './Component/Category/CategoryPage';
+import ProItem from './Component/Product/ProItem/ProItem';
+import ProductHome from './Component/Product/ProductHome';
+import Cart from './Component/Cart/Cart';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/table" element={<TableBook/>}/>
+          <Route path="/navbar" element={<AppBar/>}/>
+          <Route path="/category" element={<CategoryPage/>}/>
+          <Route path="/product" element={<ProductHome/>}/>
+          <Route path="/cart" element={<Cart/>}/>
+
+        </Routes>
+      </Router>
     </div>
   );
 }

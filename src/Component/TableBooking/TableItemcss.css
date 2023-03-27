@@ -1,0 +1,28 @@
+.table-container{
+    height: 35vh;
+    width: 100%;
+    max-width: 30%;
+    /* border: 1px solid; */
+    border-radius: 10px;
+    margin: auto;
+    background-image: url('https://cdnimg.webstaurantstore.com/uploads/seo_category/2019/5/table-dining-sets.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.num{
+    height: 8vh;
+    width: 60px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+}
+
+@media screen and (min-width:320px) and (max-width:480px){
+    .table-container{
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}

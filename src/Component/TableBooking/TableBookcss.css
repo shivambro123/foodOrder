@@ -1,0 +1,22 @@
+.table-wrapper{
+    height: 100vh;
+    width: 100%;
+    
+}
+.table-heading{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tableDiv{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width:320px) and (max-width:480px){
+    
+}

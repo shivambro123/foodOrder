@@ -1,0 +1,37 @@
+*{
+    /* overflow: hidden; */
+}
+.wrapper{
+    height: 100vh;
+    width:100%;
+    /* background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&w=1000&q=80");
+    background-repeat: no-repeat;*/
+    border: 1px solid;
+    background-image: url('https://imageio.forbes.com/specials-images/imageserve/44377845/UK-NIGHTLIFE/960x0.jpg?height=474&width=711&fit=bounds');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+} 
+.content h1{
+    padding: 0px;
+    margin: 0px;
+    line-height: 2.9rem;
+    font-size: 3.5rem;
+    color:rgb(160, 202, 188);
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 2px 1px rgb(193, 250, 114);
+    letter-spacing: 3px;
+}
+.content button{
+    border-radius: 20px;
+    padding: 8px 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: none;
+    color: white;
+}
+.content button:hover{
+    background-color: azure;
+    color: black;
+}
