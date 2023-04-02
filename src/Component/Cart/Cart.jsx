@@ -18,6 +18,7 @@ const Cart = () => {
     const onClickHandler = () =>{
       dispatch({type:'continueKitchen',payload:cartitem.cart});
       console.log('ji')
+          alert('Your Order is on the Way &#127858;')
     }
   return (
     <>
