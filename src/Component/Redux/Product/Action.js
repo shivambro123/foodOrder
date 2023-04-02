@@ -1,13 +1,14 @@
-export const itemadd = (productItem) =>{
-    return {type:'addItem',payload:productItem}
+export const itemadd = (productItem,quant) =>{
+    return {type:'addItem',payload:productItem,value:quant}
+
+
+}
+export const decrementItem = () =>{
+    return ({type:'DECREMENT_ITEM'})
 }
 
-export const decrementItem = (quantity) =>{
-    return ({type:'DECREMENT_ITEM',payload:quantity})
-}
-
-export const incrementItem = (quantity) =>{
-    return ({type:'INCREMENT_ITEM',payload:quantity})
+export const incrementItem = () =>{
+    return ({type:'INCREMENT_ITEM'})
 }
 
 export const removeItem = (id) =>{

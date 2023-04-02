@@ -31,11 +31,14 @@
 }
 .desc-info h4{
     font-size: 18px;
+    text-transform: capitalize;
+
 }
 .desc-cat{
     height: 4vh;
     display: flex;
     justify-content: space-between;
+
 }
 .desc-cat h4{
     font-size: 14px;

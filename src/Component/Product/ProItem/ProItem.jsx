@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Protemcss.css'
+import Alert from 'react-bootstrap/Alert';
 import { itemadd } from '../../Redux/Product/Action'
 import { useDispatch, useSelector } from 'react-redux'
 const ProItem = ({src,name,price,category,productitem}) => {
@@ -9,7 +10,12 @@ const ProItem = ({src,name,price,category,productitem}) => {
   console.log(productitem)
   const [click,setClick]=useState(true)
   const clickEvent = () =>{
-      
+    var quant= prompt("How Many Items You Want to Add ")
+    console.log(quant)
+    dispatch(itemadd(productitem,quant)); 
+
+    localStorage.setItem('quantity',quant)
+    // localStorage.removeItem('quantity')
   }
   return (
     <>
@@ -27,10 +33,9 @@ const ProItem = ({src,name,price,category,productitem}) => {
     <div className='desc-cat'>
       <h4>{category}</h4>
     </div>
-    <button onClick={()=>dispatch(itemadd(productitem))}>{(click)?'Add Item':'Added'}</button>
+    <button onClick={clickEvent}>{(click)?'Add Item':'Added'}</button>
   </div>
-    </div>
-
+    </div>  
     </>
   )
 }

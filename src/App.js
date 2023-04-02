@@ -7,6 +7,7 @@ import AppBar from './Component/AppBar/AppBar';
 import CategoryPage from './Component/Category/CategoryPage';
 import ProductHome from './Component/Product/ProductHome';
 import Cart from './Component/Cart/Cart';
+import Kitchen from './Component/Kitchen/Kitchen';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/product" element={<ProductHome/>}/>
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/foodOrder/" element={<HomePage/>}/>
+          <Route path="/kitchen" element={<Kitchen/>}/>
         </Routes>
       </Router>
     </div>

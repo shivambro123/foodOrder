@@ -16,6 +16,8 @@ function AppBar() {
           <Nav className="ms-auto">
             <NavLink className="nav-link" to="/table">Change Table</NavLink>
             <NavLink className="nav-link" to="/cart">CheckOut</NavLink>
+            <NavLink className="nav-link" to="/kitchen">Kitchen</NavLink>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

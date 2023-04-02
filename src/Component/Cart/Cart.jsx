@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import AppBar from '../AppBar/AppBar'
 import { NavLink } from 'react-router-dom'
 import './Cartcss.css'
 import CartItem from './CartItem/CartItem'
+import Button from 'react-bootstrap/Button';
+import { useDispatch } from 'react-redux'
 
 const Cart = () => {
     const cartitem = useSelector(state=>state.product) 
     console.log(cartitem.cart); 
+    const dispatch = useDispatch()
+    useEffect(()=>{
+      localStorage.setItem('tokitchen',cartitem.cart)
 
+    },[])
+    const onClickHandler = () =>{
+      dispatch({type:'continueKitchen',payload:cartitem.cart});
+      console.log('ji')
+    }
   return (
     <>
    <AppBar/>
@@ -25,6 +35,7 @@ const Cart = () => {
       </div>
       }
     </div>
+    <Button variant="outline-success" onClick={onClickHandler}>Proceed</Button>
     </div>
     </>
   )
