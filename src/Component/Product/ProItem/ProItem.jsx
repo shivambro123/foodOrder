@@ -3,7 +3,12 @@ import './Protemcss.css'
 import Alert from 'react-bootstrap/Alert';
 import { itemadd } from '../../Redux/Product/Action'
 import { useDispatch, useSelector } from 'react-redux'
+
+
 const ProItem = ({src,name,price,category,productitem}) => {
+  // let tot=0;
+  const [tot,settot]=useState(0)
+
   const dispatch=useDispatch()
   const newdata = useSelector(state=>state.product)
   console.log('new',newdata)
@@ -12,9 +17,9 @@ const ProItem = ({src,name,price,category,productitem}) => {
   const clickEvent = () =>{
     var quant= prompt("How Many Items You Want to Add ")
     console.log(quant)
-    dispatch(itemadd(productitem,quant)); 
-
-    localStorage.setItem('quantity',quant)
+    dispatch(itemadd(productitem,quant,tot)); 
+    settot(price * quant)
+    // localStorage.setItem('quantity',quant)
     // localStorage.removeItem('quantity')
   }
   return (

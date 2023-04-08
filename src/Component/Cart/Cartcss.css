@@ -1,0 +1,9 @@
+.TotalPrice{
+    /* border: 1px solid; */
+    height: 40px;
+    padding: 3px 5px;
+    margin: 10px 0;
+    /* width: 40%; */
+    display: flex;
+    justify-content: center;
+} 

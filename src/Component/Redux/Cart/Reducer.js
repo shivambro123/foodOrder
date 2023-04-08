@@ -1,22 +1,20 @@
 
-// const initialState = {
-    
-// }
-// const cartReducer = (state = initialState,action)=>{
-//     switch(action.type){
-//         case 'DECREMENT_ITEM':
-//             return{
-//                 qty:state.qty-(Number(action.payload))
-//             }
-//         case 'INCREMENT_ITEM':
-//             return{
-//                 qty:state.qty+(Number(action.payload)),
-//             }
-//         default:
-//             return state
-//     }
+const initialState = {
+    cart:[],
+}
+const cartReducer = (state = initialState,action)=>{
+    switch(action.type){
+        case 'proceed':
+            return{
+                ...state,
+                cart:[...state.cart,action.payload]
+            }
+     
+        default:
+            return state
+    }
 
-// }
+}
 
 
-// export default cartReducer
+export default cartReducer

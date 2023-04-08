@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import { useSelector } from 'react-redux'
 import AppBar from '../AppBar/AppBar'
 import { NavLink } from 'react-router-dom'
@@ -6,27 +6,29 @@ import './Cartcss.css'
 import CartItem from './CartItem/CartItem'
 import Button from 'react-bootstrap/Button';
 import { useDispatch } from 'react-redux'
+import { proceedItem } from '../Redux/Cart/Action'
+import { removeInner } from '../Redux/Product/Action'
 
 const Cart = () => {
+  // const [totalprice,setTotalprice]=useState(0) 
     const cartitem = useSelector(state=>state.product) 
     console.log(cartitem.cart); 
-    const dispatch = useDispatch()
-    useEffect(()=>{
-      localStorage.setItem('tokitchen',cartitem.cart)
-
-    },[])
+    const dispatch = useDispatch(); 
     const onClickHandler = () =>{
-      // dispatch({type:'continueKitchen',payload:cartitem.cart});
       console.log('ji')
+      const value = cartitem.cart;  
           alert('Your Order is on the Way 🍱' )
-    }
+          dispatch(proceedItem(value))
+         dispatch(removeInner()) 
+         console.log('remove',cartitem.cart);
+    }       
   return (
     <>
    <AppBar/>
    <div className='container'>
    <div style={{textAlign:'right'}}><NavLink to="/category">Add More</NavLink></div>
     <div>
-      {  (!cartitem)? <h1>oops select item</h1>:
+      
       <div className='d-flex flex-wrap'>
         {
             cartitem.cart.map((ele,id)=>{
@@ -34,9 +36,12 @@ const Cart = () => {
             })
         }
       </div>
-      }
+      
     </div>
-    <Button variant="outline-success" onClick={onClickHandler}>Proceed</Button>
+   {(!cartitem.cart.length == 0) ? <Button variant="outline-success" onClick={onClickHandler}>Proceed</Button> : <button>Add Item Please</button> } 
+    </div>
+    <div className='TotalPrice'>
+      <h4>Total: &#8360; {cartitem.total}</h4> 
     </div>
     </>
   )

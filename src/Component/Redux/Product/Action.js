@@ -1,7 +1,5 @@
-export const itemadd = (productItem,quant) =>{
-    return {type:'addItem',payload:productItem,value:quant}
-
-
+export const itemadd = (productItem,quant,tot) =>{
+    return {type:'addItem',payload:productItem,value:quant,tot:tot}
 }
 export const decrementItem = () =>{
     return ({type:'DECREMENT_ITEM'})
@@ -14,3 +12,7 @@ export const incrementItem = () =>{
 export const removeItem = (id) =>{
     return ({type:'REMOVE',payload:id})
 }
+export const removeInner = () =>{
+    return ({type:'REMOVEINNER'})
+}
+

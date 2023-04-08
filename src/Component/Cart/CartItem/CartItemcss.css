@@ -5,6 +5,7 @@
     margin: 10px auto;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 4px;
     background-image: linear-gradient(rgb(227, 189, 189),rgb(209, 225, 209));
 }
@@ -12,7 +13,7 @@
     box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.605);
 }
 .cart-image{
-  
+  height: 100%;
     width: 20%; 
     /* border: 1px solid; */
 }
@@ -50,13 +51,19 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: auto;
+}
+.cart-quantity h6{
+    padding: 0;
+    margin: 0;
 }
 .cart-remove{
     width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
-}   
+}  
+
 
 @media screen and (min-width:320px) and (max-width:480px){
     .cart-wrapper{
